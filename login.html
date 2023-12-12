@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>Login</title>
+        <link rel="icon" href="Logo.png "/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script>
+            function myvalidate(form){
+                var userName=form.username.value;
+                var password=form.password.value;
+               
+                if(userName.length===""|| userName.length<8){
+                    alert("Username should not be null and should be at least be at least 8 characters");
+                    return false;
+                }
+                if(password.length===0){
+                    alert("Pssword should not be null and be at 6 characters");
+                    return false;
+                }
+               
+               
+                return true;
+            }
+        </script>
+       
+        <style>
+            body{
+                padding-top: 50px;
+                   font-weight:bold;
+            }
+            form{
+                margin:0px 30% 0px 30%;
+                padding: 30px 0% 10px 3%;
+                box-shadow: 20px 20px 20px black;
+            }
+           
+           
+        </style>
+    </head>
+    <body><table align="center" border="5" color="blue"><tr><td>          
+<tr><td>
+        <center><h1><b>Login Page<b></h1></center></tr>
+       
+        <form action="home.html" onsubmit="return myvalidate(this);">
+<tr><td>          
+               USERNAME :<input type="username" name="username" autofocus/></td><br></br><br>
+               
+         <tr><td>    PASSWORD  :<input type="password" name="password"></td> <br></br><br>
+                   
+                    <tr><td> <p>Not a member? </p><a href="regi.html">sign up  </a>
+                     <input type= "submit" name="Login" class="btn btn-primary"/>Login</td><br><br>
+              </table>      
+        </form>
+   
+    </body>
+    </html>
